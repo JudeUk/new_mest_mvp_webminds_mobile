@@ -1,0 +1,6 @@
+package com.example.webminds_mobile
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
