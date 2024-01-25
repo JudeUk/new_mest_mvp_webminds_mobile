@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: CompleteProfileScreen(),
-  ));
-}
+// void main() {
+//   runApp(MaterialApp(
+//     home: CompleteProfileScreen(),
+//   ));
+// }
 
 class CompleteProfileScreen extends StatelessWidget {
   @override
@@ -27,7 +27,7 @@ class CompleteProfileScreen extends StatelessWidget {
               children: <Widget>[
                 CircleAvatar(
                   radius: 50,
-                  backgroundImage: AssetImage('assets/profile_picture.jpg'),
+                  backgroundImage: AssetImage('/Users/judeukana/MestProjects/FlutterProjects/webminds_mobile/assets/MEST_HEADSHOT.JPG'),
                 ),
                 SizedBox(width: 8),
                 Column(
