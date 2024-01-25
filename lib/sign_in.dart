@@ -1,103 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:webminds_mobile/complete_profile.dart';
-import 'package:webminds_mobile/profile_type_screen.dart';
 
-void main() {
-  runApp(SignInScreen());
-}
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
-class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        
-           appBar: AppBar(
-       
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        
-        title: Text("Sign In Screen"),
-      ),
-
-
-        body: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SvgPicture.asset('assets/logo.svg'),
-              Text('Webminds GH', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              SizedBox(height: 40),
-
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Username / email',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(height: 20),
-
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                ),
-                obscureText: true,
-              ),
-              SizedBox(height: 20),
-
-              ElevatedButton(
-                child: Text('Sign in', style: TextStyle(fontSize: 18)),
-                // onPressed: () {
-                //   // Implement sign-in logic
-                //   // For demo purposes, navigate to complete profile page
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       builder: (context) => CompleteProfileScreen(),
-                //     ),
-                //   );
-                // },
-
-                                        onPressed: () {
-                          // Navigate to ProfileTypeScreen
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ProfileTypeScreen(),
-                            ),
-                          );
-                        },
-                                        style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 50),
-                ),
-              ),
-              SizedBox(height: 20),
-
-              Text('or', style: TextStyle(fontSize: 16, color: Colors.grey)),
-              SizedBox(height: 20),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  IconButton(
-                    icon: SvgPicture.asset('assets/google_logo.svg'),
-                    onPressed: () {
-                      // Implement Google sign-in logic
-                    },
+    // ignore: prefer_const_constructors
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // ignore: prefer_const_constructors
+            Image.asset(
+              'assets/images/webminds logo.png',
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  TextField(
+                    style: TextStyle(color: Colors.blueGrey),
+                    decoration: InputDecoration(
+                      hintText: 'Enter email',
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: Color.fromRGBO(230, 245, 238, 1),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
                   ),
-
-                  IconButton(
-                    icon: SvgPicture.asset('assets/linkedin_logo.svg'),
-                    onPressed: () {
-                      // Implement LinkedIn sign-in logic
-                    },
+                  SizedBox(
+                    height: 24.0,
+                  ),
+                  TextField(
+                    style: TextStyle(color: Colors.blueGrey),
+                    decoration: InputDecoration(
+                      hintText: 'Enter Passowrd',
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: Color.fromRGBO(230, 245, 238, 1),
+                    ),
+                    keyboardType: TextInputType.visiblePassword,
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+            Center(child: Text('OR')),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.ac_unit),
+                Icon(Icons.ac_unit),
+              ],
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Sign In'),
+            ),
+          ],
         ),
       ),
     );

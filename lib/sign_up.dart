@@ -1,72 +1,84 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(SignUpScreen());
-}
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
-class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(20.0),
+    // ignore: prefer_const_constructors
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              // Logo here
-              Image.asset('assets/logo.png'), // Replace with your logo asset
-              Text('Webminds GH', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-              SizedBox(height: 40), // Provides spacing between logo and form
-              
-              // Name TextField
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Name',
-                  border: OutlineInputBorder(),
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset(
+                'assets/images/webminds logo.png',
+                fit: BoxFit.cover,
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    TextField(
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.grey),
+                        hintText: 'Full Name',
+                        filled: true,
+                        fillColor: Color.fromRGBO(230, 245, 238, 1),
+                        contentPadding: EdgeInsets.all(1.0),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    TextField(
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.grey),
+                        hintText: 'Email',
+                        filled: true,
+                        fillColor: Color.fromRGBO(230, 245, 238, 1),
+                        contentPadding: EdgeInsets.all(1.0),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    TextField(
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.grey),
+                        hintText: 'Password',
+                        filled: true,
+                        fillColor: Color.fromRGBO(230, 245, 238, 1),
+                        contentPadding: EdgeInsets.all(1.0),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                    TextField(
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.grey),
+                        hintText: 'Re-enter Password',
+                        filled: true,
+                        fillColor: Color.fromRGBO(230, 245, 238, 1),
+                        contentPadding: EdgeInsets.all(1.0),
+                      ),
+                    ),
+                    SizedBox(height: 16.0),
+                  ],
                 ),
               ),
-              SizedBox(height: 20), // Spacing between TextFields
-
-              // Email TextField
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 20),
-
-              // Password TextField
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
-                ),
-                obscureText: true,
-              ),
-              SizedBox(height: 20),
-
-              // Re-enter Password TextField
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Re-enter Password',
-                  border: OutlineInputBorder(),
-                ),
-                obscureText: true,
-              ),
-              SizedBox(height: 40), // Spacing before the sign up button
-
-              // Sign up Button
               ElevatedButton(
-                child: Text('Sign up', style: TextStyle(fontSize: 18)),
-                onPressed: () {
-                  // Implement sign-up logic
-                },
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 50), // double.infinity is the width and 50 is the height
-                ),
+                onPressed: () {},
+                child: Text('SignUp'),
               ),
             ],
           ),
