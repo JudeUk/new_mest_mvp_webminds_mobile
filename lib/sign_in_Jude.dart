@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:webminds_mobile/complete_profile.dart';
+import 'package:webminds_mobile/complete_mentor_profile.dart';
 import 'package:webminds_mobile/profile_type_screen.dart';
 
 // void main() {

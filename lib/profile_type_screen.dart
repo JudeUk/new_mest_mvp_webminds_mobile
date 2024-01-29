@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:webminds_mobile/complete_profile.dart';
+import 'package:webminds_mobile/complete_mentor_profile.dart';
 
 class ProfileTypeScreen extends StatelessWidget {
   const ProfileTypeScreen({super.key});
