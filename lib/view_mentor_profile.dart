@@ -7,7 +7,6 @@ class ProfilePage extends StatefulWidget {
   State<ProfilePage> createState() => _ProfilePageState();
 }
 
-
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
@@ -15,58 +14,51 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        title: Text('Profile', style: TextStyle(color: Colors.black87),),
-        leading: Icon(Icons.menu, color: Colors.black87,),
-        backgroundColor: Colors.white,
+        title: Text(
+          'Back',
+          style: TextStyle(color: Colors.black87),
+        ),
+        leading: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.black87,
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    "https://images.unsplash.com/photo-1683009427500-71296178737f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              const Text(
+                'Yaw Essumang',
+                style: TextStyle(fontSize: 14),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
               Row(
-                children: [
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: NetworkImage("https://images.unsplash.com/photo-1683009427500-71296178737f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
-                      )
-                ],
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          child: Text('', style: TextStyle(color: Colors.grey[800], fontSize: 25, fontWeight: FontWeight.bold),),
-                        ),
-                        Container(
-                          child: Text('Full stack Developer', style: TextStyle(color: Colors.blueGrey[400], fontSize: 14, fontWeight: FontWeight.w600),),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              border: Border.all(width: 1, color: Colors.black),
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(top: 10, left: 10),
+                                child: ElevatedButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "Book a Session",
+                                      style: TextStyle(color: Colors.black),
+                                      
+                                    )),
+                              ),
+                            ],
                           ),
-                          child: Center(
-                              child: Icon(Icons.message, color: Colors.blueGrey[400],)
-                          ),
-                        ),
-                        ],
-                    )
-                  ],
-                ),
-              ),
               Container(
                 padding: EdgeInsets.only(top: 20),
                 child: Divider(
@@ -83,10 +75,18 @@ class _ProfilePageState extends State<ProfilePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          child: Text('203', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),),
+                          child: Text(
+                            '203',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800, fontSize: 20),
+                          ),
                         ),
                         Container(
-                          child: Text('Followers', style: TextStyle(fontSize: 15, color: Colors.blueGrey),),
+                          child: Text(
+                            'Followers',
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.blueGrey),
+                          ),
                         )
                       ],
                     ),
@@ -97,10 +97,18 @@ class _ProfilePageState extends State<ProfilePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          child: Text('932', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),),
+                          child: Text(
+                            '932',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800, fontSize: 20),
+                          ),
                         ),
                         Container(
-                          child: Text('Following', style: TextStyle(fontSize: 15, color: Colors.blueGrey),),
+                          child: Text(
+                            'Following',
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.blueGrey),
+                          ),
                         )
                       ],
                     ),
@@ -111,10 +119,18 @@ class _ProfilePageState extends State<ProfilePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          child: Text('30', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20),),
+                          child: Text(
+                            '30',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800, fontSize: 20),
+                          ),
                         ),
                         Container(
-                          child: Text('Projects', style: TextStyle(fontSize: 15, color: Colors.blueGrey),),
+                          child: Text(
+                            'Projects',
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.blueGrey),
+                          ),
                         )
                       ],
                     ),
@@ -128,12 +144,42 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.blueGrey[200],
                 ),
               ),
+              SizedBox(height: 30),
+              Container(
+                child: Text(
+                  'About',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blueGrey,
+                      fontWeight: FontWeight.w900),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                child: Text(
+                  "a student, enthusiast, or specialist in a particular technical field or subject, especially electronics. a person with skills or knowledge related to technology",
+                  style: TextStyle(fontSize: 15),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.blueGrey[200],
+                ),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     padding: EdgeInsets.only(top: 30),
-                    child: Text('Top Skills', style: TextStyle(fontSize: 20, color: Colors.blueGrey, fontWeight: FontWeight.w900),),
+                    child: Text(
+                      'Top Skills',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.blueGrey,
+                          fontWeight: FontWeight.w900),
+                    ),
                   ),
                   Container(
                     padding: EdgeInsets.only(top: 20, left: 10, right: 10),
@@ -145,27 +191,39 @@ class _ProfilePageState extends State<ProfilePage> {
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Flutter', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Flutter',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                         Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('React JS', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'React JS',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                         Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Node js', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Node js',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                       ],
                     ),
@@ -180,36 +238,52 @@ class _ProfilePageState extends State<ProfilePage> {
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Django', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Django',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                         Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Laravel', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Laravel',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                         Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Express JS', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Express JS',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                         Container(
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.grey[300],
+                            color: Colors.green,
                           ),
-                          child: Center(child: Text('Tensorflow', style: TextStyle(color: Colors.blueGrey),)),
+                          child: Center(
+                              child: Text(
+                            'Tensorflow',
+                            style: TextStyle(color: Colors.white),
+                          )),
                         ),
                       ],
                     ),
@@ -218,11 +292,24 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               Container(
                 padding: EdgeInsets.only(top: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.blueGrey[200],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      child: Text('Projects', style: TextStyle(fontSize: 20, color: Colors.blueGrey, fontWeight: FontWeight.w900),),
+                      child: Text(
+                        'Projects',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.blueGrey,
+                            fontWeight: FontWeight.w900),
+                      ),
                     ),
                     Container(
                       child: Column(
@@ -233,19 +320,23 @@ class _ProfilePageState extends State<ProfilePage> {
                             width: MediaQuery.of(context).size.width,
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
-                                child: Image.network("https://images.unsplash.com/photo-1671920090611-9a40303b52cb?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",)
-                            ),
-                          ),
+                                child: Image.network(
+                                  "https://images.unsplash.com/photo-1671920090611-9a40303b52cb?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                )),
+                          ),                          
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
                                 padding: EdgeInsets.only(top: 10, left: 10),
-                                child: Text('MERN Stack Project', style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),),
+                                child: Text(
+                                  'MERN Stack Project',
+                                  style: TextStyle(
+                                      color: Colors.blueGrey,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
                               ),
-                              Container(
-                                child: Icon(Icons.favorite, color: Colors.red,),
-                              )
                             ],
                           )
                         ],
@@ -261,21 +352,11 @@ class _ProfilePageState extends State<ProfilePage> {
                             width: MediaQuery.of(context).size.width,
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(30),
-                                child: Image.network("https://images.unsplash.com/photo-1671920090611-9a40303b52cb?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-                            ),
+                                child: Image.network(
+                                    "https://images.unsplash.com/photo-1671920090611-9a40303b52cb?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.only(top: 10, left: 10),
-                                child: Text('Flutter vs React', style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),),
-                              ),
-                              Container(
-                                child: Icon(Icons.favorite, color: Colors.red,),
-                              )
-                            ],
-                          )
+                          const SizedBox(height: 70),
+                          
                         ],
                       ),
                     ),
