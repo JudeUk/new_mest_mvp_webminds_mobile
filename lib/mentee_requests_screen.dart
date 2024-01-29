@@ -92,9 +92,9 @@ class TutorScreen extends StatelessWidget {
                 padding: EdgeInsets.all(16.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
+                    primary: const Color.fromARGB(255, 26, 108, 29),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+                      borderRadius: BorderRadius.circular(30.0), 
                     ),
                     minimumSize: Size(double.infinity, 50), // double.infinity is the width and 50 is the height
                   ),
@@ -103,7 +103,7 @@ class TutorScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Generate Meeting Link',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ),
