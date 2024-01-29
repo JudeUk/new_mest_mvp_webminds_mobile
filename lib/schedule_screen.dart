@@ -46,7 +46,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Image.asset(
-            'assets/app_logo.png', 
+            'assets/webminds_logo.png', 
             height: 30.0,
             width: 30.0,
           ),
@@ -74,7 +74,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     'Create link',
-                    style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -89,6 +89,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                     ),
+                    fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
                   ),
                 ),
               ),
@@ -160,7 +161,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Text(
-                                        'Event Name $index', // Change the event name dynamically
+                                        'Event Name $index',
                                         style: TextStyle(fontSize: 18.0),
                                       ),
                                     ),
@@ -201,17 +202,18 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
       ),
       // Elevated Schedule Icon at the bottom
       bottomNavigationBar: Container(
-        // width: double.infinity,
+        width: double.infinity,
         padding: EdgeInsets.all(16.0),
         child: ElevatedButton(
           onPressed: () {
-
-            // Handle schedule action
-          },
+            
+           },
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
+            
             ),
+            
           ),
           child: Text(
             'Schedule',
