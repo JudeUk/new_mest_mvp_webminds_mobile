@@ -59,9 +59,18 @@ class _ViewMentorProfileState extends State<ViewMentorProfile> {
                   ],
                 ),
               ),
-              const Text(
-                'USD150 / Session',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white,backgroundColor: Colors.greenAccent,
+              Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.green[50]),
+                child: const Text(
+                  'USD150 / Session',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               const Padding(
