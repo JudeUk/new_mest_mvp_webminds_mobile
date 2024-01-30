@@ -80,16 +80,20 @@ class _MentorHomeState extends State<MentorHome> {
                         item["name"],
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontSize: 24,
                         ),
                       ),
                       subtitle: Text(
                         item["role"],
                         style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                           color: Colors.grey,
                         ),
+                      ),
+                      trailing: Icon(
+                        Icons.favorite,
+                        color: Colors.red[300],
                       ),
                       onTap: () {
                         // Add your onTap logic here
