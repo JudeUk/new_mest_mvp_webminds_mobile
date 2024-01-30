@@ -8,6 +8,9 @@ class SignUp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: const Icon(Icons.arrow_back),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 20),
@@ -77,8 +80,15 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green[300],
+                ),
                 onPressed: () {},
-                child: Text('SignUp'),
+                child: Text('SignUp',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                ),
               ),
             ],
           ),
