@@ -8,16 +8,17 @@ import 'package:webminds_mobile/schedule_screen.dart';
 import 'package:webminds_mobile/sign_in_Jude.dart';
 import 'package:webminds_mobile/sign_up_Jude.dart';
 import 'package:webminds_mobile/stateless.dart';
+import 'package:webminds_mobile/view_mentor_profile.dart';
 
 void main() {
   runApp( MaterialApp(
     
-    home: SignInScreen(),
+    home: ProfilePage(),
     //  home:SignInPage(),
     // home: SignUpScreen(), // signup screen
 
     //    home: CompleteProfileScreen(), // complete mentor profile, refine with finishing touches
-          // home: ScheduleScreen(),// mentor views list of mentees requests
+      // home: ScheduleScreen(),// mentor views list of mentees requests
     // home: SignInScreen(),
     // home: rootApp() // practice screen, listview cards
   //  home: myAPPTwo(), //practice screen, stateless
