@@ -47,17 +47,18 @@ class SignInPage extends StatelessWidget {
                 ],
               ),
             ),
-            Center(child: Text('OR')),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(Icons.ac_unit),
-                Icon(Icons.ac_unit),
-              ],
-            ),
+
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green[300],
+              ),
               onPressed: () {},
-              child: Text('Sign In'),
+              child: Text(
+                'Sign In',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ],
         ),

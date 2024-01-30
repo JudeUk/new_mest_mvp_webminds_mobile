@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:webminds_app/mentor_list_pages/mentor_favorites.dart';
-import 'package:webminds_app/mentor_list_pages/mentor_home.dart';
-import 'package:webminds_app/mentor_list_pages/mentor_profile.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_favorites.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_home.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_profile.dart';
 
 class MentorListPage extends StatefulWidget {
   const MentorListPage({super.key});
@@ -36,9 +36,9 @@ class _MentorListPageState extends State<MentorListPage> {
         actions: [
           ClipOval(
             child: Icon(
-                        Icons.notifications,
-                        color: Colors.green,
-                      ),
+              Icons.notifications,
+              color: Colors.green,
+            ),
           ),
         ],
       ),
