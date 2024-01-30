@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_home.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_view.dart';
 
 // void main() {
 //   runApp(MaterialApp(
@@ -81,11 +83,20 @@ class CompleteProfileScreen extends StatelessWidget {
 
             ElevatedButton(
               child: Text('Continue', style: TextStyle(fontSize: 18)),
+
               onPressed: () {
+
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MentorListPage(),
+                     
+                    ),
+                  );
                 // Implement continue action
 
                 // After completing the profile, pop the current screen and go back to the SignInScreen
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.teal,

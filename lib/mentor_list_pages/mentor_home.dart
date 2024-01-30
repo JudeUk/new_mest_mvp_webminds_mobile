@@ -13,7 +13,7 @@ class _MentorHomeState extends State<MentorHome> {
       (index) => {
             "name": 'Mikey',
             "role": 'Frontend Engineer',
-            'image': 'assets/images/Abena.JPG',
+            'image': 'assets/MEST_HEADSHOT.JPG',
           });
 
   @override
