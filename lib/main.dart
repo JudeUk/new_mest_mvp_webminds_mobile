@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webminds_mobile/complete_mentor_profile.dart';
 import 'package:webminds_mobile/mentee_requests_screen.dart';
-import 'package:webminds_mobile/onboarding%20screens/sign_in.dart';
+import 'package:webminds_mobile/mentor_list_pages/view_mentor.dart';
 import 'package:webminds_mobile/profile_type_screen.dart';
 import 'package:webminds_mobile/root.dart';
 import 'package:webminds_mobile/schedule_screen.dart';
@@ -11,6 +11,7 @@ import 'package:webminds_mobile/stateless.dart';
 import 'package:webminds_mobile/view_mentor_profile.dart';
 
 void main() {
+  // ignore: prefer_const_constructors
   runApp( MaterialApp(
     
     home: ProfilePage(),
@@ -18,7 +19,8 @@ void main() {
     // home: SignUpScreen(), // signup screen
 
     //    home: CompleteProfileScreen(), // complete mentor profile, refine with finishing touches
-      // home: ScheduleScreen(),// mentor views list of mentees requests
+
+          home: ScheduleScreen(),// mentor views list of mentees requests
     // home: SignInScreen(),
     // home: rootApp() // practice screen, listview cards
   //  home: myAPPTwo(), //practice screen, stateless
