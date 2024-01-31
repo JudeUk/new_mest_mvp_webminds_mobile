@@ -10,16 +10,14 @@ import 'package:webminds_mobile/stateless.dart';
 
 void main() {
   runApp( MaterialApp(
-    
-    // home: SignInScreen(),
-    // home: SignUpScreen(), // signup screen
+          // home: ScheduleScreen(),
+          // Navigator.of(context).pushNamed('/sign_in');
+  // Routes
+    initialRoute: '/',
+      routes: <String, WidgetBuilder> {
+        "/": (context)=> const ScheduleScreen(),
+      }
 
-    //    home: CompleteProfileScreen(), // complete mentor profile, refine with finishing touches
-          home: ScheduleScreen(),// mentor views list of mentees requests
-    // home: SignInScreen(),
-    // home: rootApp() // practice screen, listview cards
-  //  home: myAPPTwo(), //practice screen, stateless
-    // home: ProfileTypeScreen(), // select profile type screen
       
   ));
 }
