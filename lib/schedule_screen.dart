@@ -44,7 +44,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(left: 15),
           child: Image.asset(
             'assets/webminds_logo.png', 
             height: 30.0,
@@ -205,10 +205,12 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         width: double.infinity,
         padding: EdgeInsets.all(16.0),
         child: ElevatedButton(
+        
           onPressed: () {
             
            },
           style: ElevatedButton.styleFrom(
+            primary: Colors.green,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             
@@ -217,7 +219,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
           ),
           child: Text(
             'Schedule',
-            style: TextStyle(fontSize: 18.0),
+            style: TextStyle(fontSize: 18.0, color: Colors.white),
           ),
         ),
       ),
