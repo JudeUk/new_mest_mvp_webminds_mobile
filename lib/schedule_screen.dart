@@ -42,185 +42,165 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset(
-            'assets/webminds_logo.png', 
-            height: 30.0,
-            width: 30.0,
-          ),
-        ),
-        actions: [        
-          Tooltip(
-            message: 'Notifications',
-            child: IconButton(
-              icon: Icon(Icons.notifications),
-              onPressed: () {
-                // Handle notification action
-              },
+        appBar: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Image.asset(
+              'assets/webminds_logo.png',
+              height: 30.0,
+              width: 30.0,
             ),
-          )
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
+          ),
+          actions: [
+            Tooltip(
+              message: 'Notifications',
+              child: IconButton(
+                icon: Icon(Icons.notifications),
+                onPressed: () {
+                  // Handle notification action
+                },
+              ),
+            )
+          ],
+        ),
+        body: SingleChildScrollView(
+            child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Create link',
-                    style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'www.googlemeeting.com',
-                    hintStyle: TextStyle(color: Colors.grey),
-                    filled: true,
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(4)),
-                    ),
-                    fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
-                  ),
-                ),
-              ),
-              Padding(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Container(
+              child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'Schedule a session',
+                  'Choose Topic',
                   style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Select Date',
-                    filled: true,
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(4)),
-                    ),
-                    fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.calendar_today),
-                      onPressed: () => _selectDate(context),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Select Time',
-                    filled: true,
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(4)),
-                    ),
-                    fillColor: Color.fromARGB(255, 117, 224, 158).withAlpha(100),
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.access_time),
-                      onPressed: () => _selectTime(context),
-                    ),
-                  ),
-                ),
-              ),
-              // List item using ListView.builder
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: 3,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundImage: AssetImage('assets/event_icon.png'),
-                              radius: 30.0,
-                            ),
-                            SizedBox(width: 16.0),
-                            Expanded(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                        'Event Name $index',
-                                        style: TextStyle(fontSize: 18.0),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Container(
-                                      padding: EdgeInsets.all(8.0),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(16.0),
-                                        border: Border.all(
-                                          color: Colors.green,
-                                          width: 2.0,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        'Paid',
-                                        style: TextStyle(
-                                          color: Colors.green,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-      // Elevated Schedule Icon at the bottom
-      bottomNavigationBar: Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(16.0),
-        child: ElevatedButton(
-          onPressed: () {
-            
-           },
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-            
             ),
-            
-          ),
-          child: Text(
-            'Schedule',
-            style: TextStyle(fontSize: 18.0),
-          ),
-        ),
-      ),
-    );
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Choose a topic',
+                  hintStyle: TextStyle(color: Colors.grey),
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
+                     suffixIcon: IconButton(
+                    icon: Icon(Icons.arrow_drop_down),
+                    onPressed: () {}
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Schedule a session',
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Select Date',
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.calendar_today),
+                    onPressed: () => _selectDate(context),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Select Time',
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  fillColor: Color.fromARGB(255, 117, 224, 158).withAlpha(100),
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.access_time),
+                    onPressed: () => _selectTime(context),
+                  ),
+                ),
+              ),
+            ),
+              Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Set Rate',
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+                        Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'GHS40/Hour',
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
+                ),
+              ),
+            ), 
+                        Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Session Link',
+                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+              Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'www.googlemeeting.com',
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  fillColor: Color.fromARGB(255, 129, 235, 184).withAlpha(100),
+                ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  'Schedule',
+                  style: TextStyle(fontSize: 18.0, color: Colors.white),
+                ),
+              ),
+            ),
+          ]),
+        )));
   }
 }
+
+    
