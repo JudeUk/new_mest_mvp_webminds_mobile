@@ -3,6 +3,10 @@ import 'package:webminds_mobile/mentor_list_pages/mentor_favorites.dart';
 import 'package:webminds_mobile/mentor_list_pages/mentor_home.dart';
 import 'package:webminds_mobile/mentor_list_pages/mentor_profile.dart';
 
+import 'package:webminds_mobile/mentor_list_pages/mentor_favorites.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_home.dart';
+import 'package:webminds_mobile/mentor_list_pages/mentor_profile.dart';
+
 class MentorListPage extends StatefulWidget {
   const MentorListPage({super.key});
 
@@ -31,7 +35,7 @@ class _MentorListPageState extends State<MentorListPage> {
       appBar: AppBar(
         leading: Container(
           padding: EdgeInsets.all(16),
-          child: Image.asset('assets/images/webminds logo.png'),
+          child: Image.asset('assets/webminds logo.png'),
         ),
         actions: [
           ClipOval(

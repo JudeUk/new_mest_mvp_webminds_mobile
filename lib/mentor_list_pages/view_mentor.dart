@@ -14,9 +14,16 @@ class _ViewMentorProfileState extends State<ViewMentorProfile> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.green[300],
+          leading: IconButton(
+
+            icon: const Icon(Icons.arrow_back,),
+            
+            color: Colors.green[300], 
+            onPressed: () { 
+
+                Navigator.of(context).pop(); // Navigate back to the previous screen
+
+             },
           ),
         ),
         body: Padding(
