@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webminds_mobile/complete_mentor_profile.dart';
 import 'package:webminds_mobile/mentee_requests_screen.dart';
+import 'package:webminds_mobile/mentor_list_pages/thank_you.dart';
 import 'package:webminds_mobile/mentor_list_pages/view_mentor.dart';
 import 'package:webminds_mobile/profile_type_screen.dart';
 import 'package:webminds_mobile/root.dart';
@@ -19,9 +20,6 @@ void main() {
       routes: <String, WidgetBuilder> {
         "/": (context)=> const ScheduleScreen(),
       }
-
-// <<<<<<< fred_dev
-// =======
 //     //    home: CompleteProfileScreen(), // complete mentor profile, refine with finishing touches
 
 //           home: ScheduleScreen(),// mentor views list of mentees requests
@@ -29,7 +27,6 @@ void main() {
 //     // home: rootApp() // practice screen, listview cards
 //   //  home: myAPPTwo(), //practice screen, stateless
 //     // home: ProfileTypeScreen(), // select profile type screen
-// >>>>>>> main
       
   ));
 }
