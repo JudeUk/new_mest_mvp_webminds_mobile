@@ -16,7 +16,7 @@ class SignUpScreen extends StatelessWidget {
             children: <Widget>[
               // Logo here
               Image.asset(
-                  'assets/webminds_logo.png'), // Replace with your logo asset
+                  'assets/webminds logo.png'), // Replace with your logo asset
               Text('Webminds GH',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
               SizedBox(height: 40), // Provides spacing between logo and form

@@ -14,18 +14,20 @@ class SignInPage extends StatelessWidget {
           children: [
             // ignore: prefer_const_constructors
             Image.asset(
-              'assets/images/webminds logo.png',
+              'assets/webminds_logo.png',
               fit: BoxFit.cover,
+              width: 100,
+              height: 100,
             ),
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(16.0),
               child: Column(
                 children: [
                   TextField(
                     style: TextStyle(color: Colors.blueGrey),
                     decoration: InputDecoration(
                       hintText: 'Enter email',
-                      hintStyle: TextStyle(color: Colors.grey),
+                      hintStyle: TextStyle(color: Colors.grey[300]),
                       filled: true,
                       fillColor: Color.fromRGBO(230, 245, 238, 1),
                     ),
@@ -38,11 +40,33 @@ class SignInPage extends StatelessWidget {
                     style: TextStyle(color: Colors.blueGrey),
                     decoration: InputDecoration(
                       hintText: 'Enter Passowrd',
-                      hintStyle: TextStyle(color: Colors.grey),
+                      hintStyle: TextStyle(color: Colors.grey[300]),
                       filled: true,
                       fillColor: Color.fromRGBO(230, 245, 238, 1),
                     ),
                     keyboardType: TextInputType.visiblePassword,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Dont have an account?',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              TextSpan(
+                                text: 'Sign Up',
+                                style: TextStyle(color: Colors.green),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -50,7 +74,7 @@ class SignInPage extends StatelessWidget {
 
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[300],
+                backgroundColor: Color.fromRGBO(2, 205, 132, 1),
               ),
               onPressed: () {},
               child: Text(
