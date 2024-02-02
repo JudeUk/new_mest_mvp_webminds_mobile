@@ -15,7 +15,7 @@ class SignInScreen extends StatelessWidget {
         
            appBar: AppBar(
        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.teal,
         
         title: Text("Sign In Screen"),
       ),
@@ -48,19 +48,9 @@ class SignInScreen extends StatelessWidget {
               SizedBox(height: 20),
 
               ElevatedButton(
-                child: Text('Sign in', style: TextStyle(fontSize: 18)),
-                // onPressed: () {
-                //   // Implement sign-in logic
-                //   // For demo purposes, navigate to complete profile page
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //       builder: (context) => CompleteProfileScreen(),
-                //     ),
-                //   );
-                // },
+                
 
-                                        onPressed: () {
+                onPressed: () {
                           // Navigate to ProfileTypeScreen
                           Navigator.push(
                             context,
@@ -70,8 +60,12 @@ class SignInScreen extends StatelessWidget {
                           );
                         },
                                         style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 50),
+                  minimumSize: Size(double.infinity, 50),backgroundColor: Colors.teal
                 ),
+                
+
+                child: const Text('Sign in', style: TextStyle(fontSize: 18,  color: Colors.white, // Button color
+                  )),
               ),
               SizedBox(height: 20),
 

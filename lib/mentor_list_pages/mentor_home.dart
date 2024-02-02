@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webminds_mobile/mentor_list_pages/view_mentor.dart';
 
 class MentorHome extends StatefulWidget {
   const MentorHome({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class _MentorHomeState extends State<MentorHome> {
       (index) => {
             "name": 'Mikey',
             "role": 'Frontend Engineer',
-            'image': 'assets/images/Abena.JPG',
+            'image': 'assets/MEST_HEADSHOT.JPG',
           });
 
   @override
@@ -96,6 +97,12 @@ class _MentorHomeState extends State<MentorHome> {
                         color: Colors.red[300],
                       ),
                       onTap: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ViewMentorProfile(),
+                            ),
+                          );
                         // Add your onTap logic here
                       },
                     ),
