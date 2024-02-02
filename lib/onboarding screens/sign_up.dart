@@ -18,7 +18,7 @@ class SignUp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                'assets/images/webminds logo.png',
+                'assets/webminds_logo.png',
                 fit: BoxFit.cover,
               ),
               Container(

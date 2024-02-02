@@ -13,16 +13,26 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
-    return Container(
-      color: Colors.white,
-      child: Expanded(
-        child: Container(
-          height: 100,
-          width: 100,
-          child: Image.asset(
-            'assets/images/webminds logo.png',
-            // fit: BoxFit.fitHeight,
-          ),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/webminds_logo.png',
+              width: 100,
+              height: 100,
+            ),
+            Text(
+              'Webminds',
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(2, 205, 132, 1),
+              ),
+            ),
+          ],
         ),
       ),
     );
